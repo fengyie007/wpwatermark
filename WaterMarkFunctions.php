@@ -93,9 +93,9 @@ function wpWaterMarkCreateWordsWatermark($imgurl, $newimgurl, $text, $margin='30
 	$angle = intval($angle);
 	$watermark_margin = intval($watermark_margin);
 	$imageCreateFunArr = array(
-		'image/jpeg' => 'imagecreatefromjpeg', 'image/png' => 'imagecreatefrompng', 'image/gif' => 'imagecreatefromgif'
+		'image/jpeg' => 'imagecreatefromjpeg', 'image/png' => 'imagecreatefrompng', 'image/gif' => 'imagecreatefromgif', 'image/webp' => 'imagecreatefromwebp'
 	);
-	$imageOutputFunArr = array('image/jpeg' => 'imagejpeg', 'image/png' => 'imagepng', 'image/gif' => 'imagegif');
+	$imageOutputFunArr = array('image/jpeg' => 'imagejpeg', 'image/png' => 'imagepng', 'image/gif' => 'imagegif', 'image/webp' => 'imagewebp');
 	$imgsize = getimagesize($imgurl);
 	if (empty($imgsize)) { return false; }
 	$imgWidth = $imgsize[0];
@@ -212,9 +212,9 @@ function wpWaterMarkCreateImageWatermark( $img_url, $stamp_url, $newimgurl, $poi
 	$margin = intval($margin);
 	$watermark_margin = intval($watermark_margin);
 	$imageCreateFunArr = array(
-		'image/jpeg' => 'imagecreatefromjpeg', 'image/png' => 'imagecreatefrompng', 'image/gif' => 'imagecreatefromgif'
+		'image/jpeg' => 'imagecreatefromjpeg', 'image/png' => 'imagecreatefrompng', 'image/gif' => 'imagecreatefromgif', 'image/webp' => 'imagecreatefromwebp'
 	);
-	$imageOutputFunArr = array('image/jpeg' => 'imagejpeg', 'image/png' => 'imagepng', 'image/gif' => 'imagegif');
+	$imageOutputFunArr = array('image/jpeg' => 'imagejpeg', 'image/png' => 'imagepng', 'image/gif' => 'imagegif', 'image/webp' => 'imagewebp');
 	$im_size = getimagesize($img_url);
 	$stamp_size = getimagesize($stamp_url);
 	if ( empty($im_size) or empty($stamp_size) ) {return false;}
